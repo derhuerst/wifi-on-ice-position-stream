@@ -1,0 +1,36 @@
+{
+	"name": "wifi-on-ice-position-stream",
+	"description": "A stream of ICE positions, taken from the on-board WiFi.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"ice",
+		"wifi on ice",
+		"portal",
+		"movement",
+		"track",
+		"gps",
+		"gpx"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/wifi-on-ice-position-stream",
+	"repository": "derhuerst/wifi-on-ice-position-stream",
+	"bugs": "https://github.com/derhuerst/wifi-on-ice-position-stream/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tap-min": "^1.2.2",
+		"tape": "^4.8.0"
+	},
+	"scripts": {
+		"test": "env NODE_ENV=dev node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
