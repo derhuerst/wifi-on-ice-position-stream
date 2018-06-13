@@ -29,6 +29,22 @@ positions.once('data', (position) => {
 
 `createStream()` returns a [readable stream](https://nodejs.org/api/stream.html#stream_readable_streams) in [object mode](https://nodejs.org/api/stream.html#stream_object_mode).
 
+Each position/chunk is in the format of [`wifi-on-ice-portal-client`](https://github.com/derhuerst/wifi-on-ice-portal-client/blob/c64a74611d9d99ad9d43fd4c8f3b44f8830ec72f/readme.md#usage) with an additional `clientTime` field:
+
+```js
+{
+	ok: true,
+	speed: 245,
+	gpsOk: true,
+	latitude: 51.86973533333333,
+	longitude: 9.989614166666666,
+	servicelevel: 'AVAILABLE_SERVICE',
+	wagonClass: 'FIRST',
+	serverTime: 1504698041985,
+	clientTime: 1504698041872
+}
+```
+
 
 ## Contributing
 

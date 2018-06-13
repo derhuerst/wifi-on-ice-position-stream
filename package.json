@@ -24,6 +24,7 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"wifi-on-ice-portal-client": "^0.2.1"
 	},
 	"devDependencies": {
 		"tap-min": "^1.2.2",
