@@ -20,7 +20,7 @@ npm install wifi-on-ice-position-stream
 ```js
 const createStream = require('wifi-on-ice-position-stream')
 
-const positions = createSteam()
+const positions = createStream()
 positions.once('data', (position) => {
 	console.log(position)
 	positions.destroy()
