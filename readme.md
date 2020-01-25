@@ -53,6 +53,12 @@ createPositionsStream(interval = 5 * 1000, closeOnTrainChange = false)
 ```
 
 
+## Related
+
+- [`wifi-on-ice-portal-client`](https://github.com/derhuerst/wifi-on-ice-portal-client) – Query information from the WifiOnICE portal in German ICE trains.
+- [`record-ice-movement`](https://github.com/derhuerst/record-ice-movement) – Record the movement of any ICE using the on-board WiFi.
+
+
 ## Contributing
 
 If you have a question or have difficulties using `wifi-on-ice-position-stream`, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/wifi-on-ice-position-stream/issues).
