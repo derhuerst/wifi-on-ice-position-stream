@@ -45,12 +45,10 @@ Each position/chunk is in the format of [`wifi-on-ice-portal-client`](https://gi
 }
 ```
 
+You may pass these options to `createStream(opt)`:
 
-## API
-
-```js
-createPositionsStream(interval = 5 * 1000, closeOnTrainChange = false)
-```
+- `interval` – How often to fetch the current position from the on-board WiFi, in milliseconds. Default: `5000`
+- `endOnTrainChange` – [End](https://nodejs.org/docs/latest-v10.x/api/stream.html#stream_event_end) the stream as soon as the [*Triebzugnummer*](https://www.dybas.de/dybas/index/t/tz.html) reported by the on-board WiFi changes, e.g. when your client accidentally connects to the WiFi of a different train. Default: `true`
 
 
 ## Related

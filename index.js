@@ -3,7 +3,17 @@
 const {Readable} = require('stream')
 const portal = require('wifi-on-ice-portal-client')
 
-const createPositionsStream = (interval = 5 * 1000, closeOnTrainChange = false) => {
+const defaults = {
+	interval: 5 * 1000,
+	endOnTrainChange: true
+}
+
+const createPositionsStream = (opt = {}) => {
+	const {
+		interval,
+		endOnTrainChange
+	} = {...defaults, ...opt}
+
 	if (
 		'number' !== typeof interval ||
 		Number.isNaN(interval) ||
@@ -23,7 +33,7 @@ const createPositionsStream = (interval = 5 * 1000, closeOnTrainChange = false) 
 
 		portal.status()
 		.then((data) => {
-			if (data.tzn && lastTzn && closeOnTrainChange && data.tzn !== lastTzn) {
+			if (data.tzn && lastTzn && endOnTrainChange && data.tzn !== lastTzn) {
 				out.end()
 				return;
 			}
