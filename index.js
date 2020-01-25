@@ -24,7 +24,7 @@ const createPositionsStream = (interval = 5 * 1000, closeOnTrainChange = false) 
 		portal.status()
 		.then((data) => {
 			if (data.tzn && lastTzn && closeOnTrainChange && data.tzn !== lastTzn) {
-				out.close()
+				out.end()
 				return;
 			}
 			lastTzn = data.tzn
