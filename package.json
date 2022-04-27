@@ -1,7 +1,7 @@
 {
 	"name": "wifi-on-ice-position-stream",
 	"description": "A stream of ICE positions, taken from the on-board WiFi.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "index.js",
 	"files": [
 		"index.js"
