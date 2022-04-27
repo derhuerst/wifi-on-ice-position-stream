@@ -34,7 +34,7 @@ const createPositionsStream = (opt = {}) => {
 		portal.status()
 		.then((data) => {
 			if (data.tzn && lastTzn && endOnTrainChange && data.tzn !== lastTzn) {
-				out.end()
+				out.push(null) // end
 				return;
 			}
 			lastTzn = data.tzn
